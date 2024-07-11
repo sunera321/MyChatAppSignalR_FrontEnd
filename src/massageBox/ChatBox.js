@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
-import { FiSend} from 'react-icons/fi'; // Ensure react-icons is installed
+import PropTypes from 'prop-types';
+import { FiSend } from 'react-icons/fi'; // Ensure react-icons is installed
 
 const ChatBox = ({ sendMessage }) => {
     const [message, setMessage] = useState('');
@@ -22,7 +23,7 @@ const ChatBox = ({ sendMessage }) => {
         <div className="p-4 shadow-lg bg-gradient-to-r from-purple-500 to-indigo-600 rounded-t-3xl">
             <div className="flex items-end max-w-4xl mx-auto space-x-2">
                 <button className="p-3 text-purple-600 transition duration-300 bg-white rounded-full hover:bg-purple-100 focus:outline-none">
-                    
+                    {/* Add icon or content here if needed */}
                 </button>
                 <div className="relative flex-grow">
                     <textarea
@@ -42,11 +43,15 @@ const ChatBox = ({ sendMessage }) => {
                     </button>
                 </div>
                 <button className="p-3 text-purple-600 transition duration-300 bg-white rounded-full hover:bg-purple-100 focus:outline-none">
-                    
+                    {/* Add icon or content here if needed */}
                 </button>
             </div>
         </div>
     );
 }
+
+ChatBox.propTypes = {
+    sendMessage: PropTypes.func.isRequired
+};
 
 export default ChatBox;

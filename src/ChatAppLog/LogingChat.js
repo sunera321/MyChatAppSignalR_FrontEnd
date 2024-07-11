@@ -26,9 +26,9 @@ const LogingChat = () => {
               <div className="mb-8 md:mb-0">
                 <h1 className="mb-4 text-4xl font-bold md:text-5xl">Talk to strangers, Make friends!</h1>
                 <p className="mb-8 text-xl">
-                Certainly. I'll expand on this description to create more engaging content for your website:
-"Welcome to the ultimate social chat experience! Our app revolutionizes the way you connect online.
-With users from every time zone, there's always someone online ready to chat. Say goodbye to lonely nights and hello to round-the-clock companionship.
+                
+Welcome to the ultimate social chat experience! Our app revolutionizes the way you connect online.
+With users from every time zone, there is always someone online ready to chat. Say goodbye to lonely nights and hello to round-the-clock companionship.
                 </p>
                 <button className="px-6 py-3 text-lg font-semibold transition bg-blue-600 rounded-full hover:bg-blue-700">
                   <a href="/chathome">Start Chatting</a>
