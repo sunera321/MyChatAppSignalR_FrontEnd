@@ -13,7 +13,7 @@ function App() {
         setLoading(true);
         try {
             const connection = new HubConnectionBuilder()
-                .withUrl("https://localhost:7189/chat")
+                .withUrl("https://chatroomappwithsignalr-dxctc2fhehczeyfb.eastus-01.azurewebsites.net/chat")
                 .configureLogging(LogLevel.Information)
                 .build();
 
