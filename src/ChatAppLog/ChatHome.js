@@ -3,7 +3,7 @@ import { LogLevel, HubConnectionBuilder } from '@microsoft/signalr';
 import WaitingRoom from '../Components/WaitingRoom';
 import ChatRoom from '../Components/ChatRoom';
 import ChatBox from '../massageBox/ChatBox';
-
+import { Circles } from 'react-loader-spinner';
 
 const ChatHome = () => {
     const [connection, setConnection] = useState(null);
@@ -14,7 +14,7 @@ const ChatHome = () => {
         setLoading(true);
         try {
             const connection = new HubConnectionBuilder()
-                .withUrl("https://chatapp20240710175935.azurewebsites.net/chat")//stes the url of the hub
+                .withUrl("https://chatapp20240710175935.azurewebsites.net/chat")
                 .configureLogging(LogLevel.Information)
                 .build();
 
@@ -32,7 +32,7 @@ const ChatHome = () => {
 
             try {
                 await connection.start();
-                alert("connected");
+             
             } catch (err) {
                 console.error("Error while starting connection: ", err);
                 setLoading(false);
@@ -59,15 +59,20 @@ const ChatHome = () => {
     };
 
     return (
-        <div className="flex flex-col min-h-screen bg-gray-100">
-            <header className="p-4 text-center text-white bg-blue-600">
-                <h1 className="text-2xl">Welcome to ChatRoom</h1>
-            </header>
+        <div className="flex flex-col h-screen bg-gray-900">
             <main className="container flex-grow p-20 mx-auto">
                 {loading ? (
                     <div className="flex items-center justify-center h-full">
-                        <div className="loader"></div> {/* You can add a loading spinner here */}
-                        <p>Connecting to chat room...</p>
+                        <Circles
+                            height="80"
+                            width="80"
+                            color="#4fa94d"
+                            ariaLabel="circles-loading"
+                            wrapperStyle={{}}
+                            wrapperClass=""
+                            visible={true}
+                        />
+                        <p className="ml-4 text-white">Connecting to chat room...</p>
                     </div>
                 ) : (
                     !connection ? (
@@ -84,4 +89,4 @@ const ChatHome = () => {
     );
 }
 
-export default ChatHome
+export default ChatHome;

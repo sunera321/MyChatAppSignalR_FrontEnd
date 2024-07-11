@@ -1,14 +1,17 @@
-import { LogLevel, HubConnectionBuilder } from '@microsoft/signalr';
-import WaitingRoom from './Components/WaitingRoom';
-import ChatRoom from './Components/ChatRoom';
-import ChatBox from './massageBox/ChatBox';
-import React, { useState } from 'react';
+import React from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import ChatLog from './ChatAppLog/LogingChat';
 import ChatHome from './ChatAppLog/ChatHome';
 
 function App() {
-    <div>
-        <button src={ChatHome}>Click me</button>
-    </div>
+  return (
+    <Router>
+      <Routes>
+        <Route path="/" element={<ChatLog />} />
+        <Route path="/chathome" element={<ChatHome />} />
+      </Routes>
+    </Router>
+  );
 }
 
 export default App;

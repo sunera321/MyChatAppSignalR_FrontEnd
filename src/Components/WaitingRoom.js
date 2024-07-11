@@ -9,10 +9,13 @@ const WaitingRoom = ({ JoinChatRoom }) => {
     }
 
     return (
-        <div className="max-w-md mx-auto bg-white p-8 rounded-lg shadow-lg">
-            <h2 className="text-2xl font-bold mb-4">Join Chat Room</h2>
+        <div>
+                <h1 className="text-5xl text-center text-white mb-14">Welcome to ChatRoom</h1>
+        <div>
+        <div className="max-w-md p-8 mx-auto bg-white rounded-lg shadow-lg">
+            <h2 className="mb-4 text-2xl font-bold">Join Chat Room</h2>
             <div className="mb-4">
-                <label className="block text-gray-700 mb-2">User Name</label>
+                <label className="block mb-2 text-gray-700">User Name</label>
                 <input
                     type="text"
                     className="w-full p-2 border rounded"
@@ -22,7 +25,7 @@ const WaitingRoom = ({ JoinChatRoom }) => {
                 />
             </div>
             <div className="mb-4">
-                <label className="block text-gray-700 mb-2">Chat Room</label>
+                <label className="block mb-2 text-gray-700">Chat Room</label>
                 <input
                     type="text"
                     className="w-full p-2 border rounded"
@@ -32,11 +35,13 @@ const WaitingRoom = ({ JoinChatRoom }) => {
                 />
             </div>
             <button
-                className="w-full bg-blue-600 text-white p-2 rounded hover:bg-blue-700"
+                className="w-full p-2 text-white bg-blue-600 rounded hover:bg-blue-700"
                 onClick={handleJoin}
             >
                 Join Chat Room
             </button>
+        </div>
+        </div>
         </div>
     );
 }
