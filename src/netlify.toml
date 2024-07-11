@@ -2,3 +2,14 @@
   from = "/*"
   to = "/index.html"
   status = 200
+[build]
+  publish = "build" # Update this to your build directory if different
+  command = "npm run build" # Update this to your build command if different
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+    Access-Control-Allow-Origin = "https://mybetschatroomapp.netlify.app"
+    Access-Control-Allow-Methods = "GET, POST, OPTIONS"
+    Access-Control-Allow-Headers = "X-Requested-With, Content-Type, Authorization"
+    Access-Control-Allow-Credentials = "true"
