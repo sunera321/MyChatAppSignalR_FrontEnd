@@ -60,7 +60,7 @@ const ChatHome = () => {
 
     return (
         <div className="flex flex-col h-screen bg-gray-900">
-            <main className="container flex-grow p-20 mx-auto">
+            <main className="container flex-grow mx-auto">
                 {loading ? (
                     <div className="flex items-center justify-center h-full">
                         <Circles
@@ -78,7 +78,7 @@ const ChatHome = () => {
                     !connection ? (
                         <WaitingRoom JoinChatRoom={joinChatRoom} />
                     ) : (
-                        <div className="flex flex-col h-full">
+                        <div className="flex flex-col h-[95%] mt-5 ">
                             <ChatRoom usermessages={usermessages} />
                             <ChatBox sendMessage={sendMessage} />  
                         </div>
