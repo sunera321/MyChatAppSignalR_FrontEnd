@@ -13,7 +13,7 @@ const ChatRoom = ({ usermessages }) => {
     }, [usermessages]);
 
     return (
-        <div className="h-screen p-4 mt-8 overflow-y-scroll bg-white rounded-lg shadow-lg">
+        <div className="h-screen p-4 mt-1 overflow-y-scroll bg-white rounded-lg shadow-lg md:mt-8">
             {usermessages.map((msg, index) => (
                 <div key={index} className={`mb-2 p-2 rounded ${msg.isSystem ? 'bg-gray-200' : 'bg-blue-200'}`}>
                     <strong>{msg.user}: </strong>{msg.message}
