@@ -20,7 +20,7 @@ const ChatBox = ({ sendMessage }) => {
     }
 
     return (
-        <div className="p-2 shadow-lg bg-gradient-to-r from-purple-500 to-indigo-600 rounded-t-3xl">
+        <div className="p-2 shadow-lg bg-gradient-to-r from-purple-500 to-indigo-600 ">
             <div className="flex items-end max-w-4xl mx-auto space-x-2">
                 <div className="relative flex-grow">
                     <textarea

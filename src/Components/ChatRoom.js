@@ -1,14 +1,25 @@
-import React from 'react';
+import React, { useEffect, useRef } from 'react';
 import PropTypes from 'prop-types';
 
 const ChatRoom = ({ usermessages }) => {
+    const messagesEndRef = useRef(null);
+
+    const scrollToBottom = () => {
+        messagesEndRef.current?.scrollIntoView({ behavior: "smooth" });
+    };
+
+    useEffect(() => {
+        scrollToBottom();
+    }, [usermessages]);
+
     return (
-        <div className="flex-grow p-4 mb-4 overflow-auto bg-white rounded-lg shadow-lg">
+        <div className="h-screen p-4 mt-8 overflow-y-scroll bg-white rounded-lg shadow-lg">
             {usermessages.map((msg, index) => (
                 <div key={index} className={`mb-2 p-2 rounded ${msg.isSystem ? 'bg-gray-200' : 'bg-blue-200'}`}>
                     <strong>{msg.user}: </strong>{msg.message}
                 </div>
             ))}
+            <div ref={messagesEndRef} />
         </div>
     );
 }

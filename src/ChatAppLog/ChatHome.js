@@ -78,7 +78,7 @@ const ChatHome = () => {
                     !connection ? (
                         <WaitingRoom JoinChatRoom={joinChatRoom} />
                     ) : (
-                        <div className="flex flex-col h-[95%] mt-5 ">
+                        <div className="flex flex-col h-screen ">
                             <ChatRoom usermessages={usermessages} />
                             <ChatBox sendMessage={sendMessage} />  
                         </div>
