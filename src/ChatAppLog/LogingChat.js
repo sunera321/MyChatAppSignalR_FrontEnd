@@ -10,13 +10,13 @@ const LogingChat = () => {
           {/* Header */}
           <header className="flex items-center justify-between p-4">
             <div className="text-2xl font-bold">ChatChat.gg</div>
-            <nav className="hidden md:block">
+            {/* <nav className="hidden md:block">
               <a href="#" className="mx-2 hover:text-purple-400">Home</a>
               <a href="#" className="mx-2 hover:text-purple-400">Blog</a>
               <a href="#" className="mx-2 hover:text-purple-400">About</a>
               <a href="#" className="mx-2 hover:text-purple-400">Contact</a>
             </nav>
-            <button className="px-4 py-2 transition bg-purple-600 rounded hover:bg-purple-700">Login</button>
+          <button className="px-4 py-2 transition bg-purple-600 rounded hover:bg-purple-700">Login</button> */}
           </header>
     
           {/* Main Content */}
